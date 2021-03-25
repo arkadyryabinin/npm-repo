@@ -1,0 +1,16 @@
+{
+  "name": "list-singly-linked",
+  "version": "1.0.4",
+  "description": "Singly Linked List data structure implementation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "singly",
+    "linked",
+    "list"
+  ],
+  "author": "Arkady Ryabinin",
+  "license": "ISC"
+}
