@@ -15,6 +15,8 @@ const initText = '3 Men in a Boat (To Say Nothing of the Dog),';
 
 // encrypt the text
 const encryptedText = cryptor.encrypt(initText);
+console.log(encryptedText);
 
 // decrypt the text
 const decryptedText = cryptor.decrypt(encryptedText);
+console.log(decryptedText);
