@@ -1,6 +1,6 @@
 {
   "name": "fine-crypt",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "simple encrypt/decrypt library",
   "main": "app.js",
   "scripts": {
@@ -9,7 +9,9 @@
   "keywords": [
     "crypto",
     "encrypt",
-    "decrypt"
+    "decrypt",
+    "obfuscate id",
+    "hide id"
   ],
   "author": "Arkady Ryabinin",
   "license": "ISC"
