@@ -4,12 +4,14 @@ const crypto = require('crypto');
 // encrypted text should contain only UTF-16 characters
 // with codes between 33 and 1023
 // e.g. latin letters, digits and basic punctuation marks
+// encrypted text is a Base36 string
 
 module.exports = function Cryptor(secret) {
-  if (!secret) return null;
-  const sec = `${secret}`;
 
-  this.encrypt = (val) => {
+  this.encrypt = (val, updatedSecret) => {
+    // `secret` is an optional parameter if you want to redefine the secret word
+    const sec = `${updatedSecret || secret || ''}`;
+    if (!sec) return null;
     if (!val) return false;
     const value = `${val}`;
     const key = crypto.createHash('sha1').update(sec).digest('hex');
@@ -26,7 +28,10 @@ module.exports = function Cryptor(secret) {
     return crypttext;
   };
 
-  this.decrypt = (val) => {
+  this.decrypt = (val, updatedSecret) => {
+    // `secret` is an optional parameter if you want to redefine the secret word
+    const sec = `${updatedSecret || secret || ''}`;
+    if (!sec) return null;
     if (!val) return false;
     const value = `${val}`;
     const key = crypto.createHash('sha1').update(sec).digest('hex');

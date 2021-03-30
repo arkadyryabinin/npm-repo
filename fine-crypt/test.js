@@ -14,7 +14,7 @@ const cryptor = new Cryptor(secret);
 const initText = '3 Men in a Boat (To Say Nothing of the Dog),';
 
 // encrypt the text
-const encryptedText = cryptor.encrypt(initText);
+const encryptedText = cryptor.encrypt(initText, secret);
 console.log(encryptedText);
 
 // decrypt the text

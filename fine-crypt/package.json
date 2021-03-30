@@ -1,6 +1,6 @@
 {
   "name": "fine-crypt",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "simple encrypt/decrypt library",
   "main": "app.js",
   "scripts": {
