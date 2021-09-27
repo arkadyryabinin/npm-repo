@@ -17,6 +17,12 @@ list.shift() // removes the head from list and returns the removed node's value
 
 list.get(index) // returns the node, defined by index
 
+list.findIndex(callback) // returns the index of the first element in the list, that satisfies the provided testing callback function.
+// Otherwise, it returns -1, indicating that no element passed the test
+
+list.find(callback) // returns the value of the first element in the provided array that satisfies the provided testing function.
+// If no values satisfy the testing function, undefined is returned.
+
 list.length // the length of the list
 ```
 

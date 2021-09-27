@@ -69,4 +69,22 @@ module.exports = class LinkedList {
     this.length -= 1;
     return oldTail.value;
   }
+
+  find(cb) { // cb is function(elem)
+    let current = this.head;
+    for (let i = 0; i < this.length; i += 1) {
+      if (cb(current.value)) return current;
+      else current = current.next;
+    }
+    return undefined;
+  }
+
+  findIndex(cb) { // cb is function(elem)
+    let current = this.head;
+    for (let i = 0; i < this.length; i += 1) {
+      if (cb(current.value)) return i;
+      else current = current.next;
+    }
+    return -1;
+  }
 };
